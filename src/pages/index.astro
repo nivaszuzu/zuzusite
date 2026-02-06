@@ -1,29 +1,123 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<h1>Zuzu Beauty Studio</h1>
+<BaseLayout>
+  <main class="container">
 
-<p>
-Professional bridal makeup, party makeup, and skincare services.
-</p>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <h1>Zuzu Beauty Studio</h1>
+      <p class="tagline">
+        Bridal • Party Makeup • Skincare • Hair Styling
+      </p>
 
-<ul>
-  <li>💄 Bridal Makeup</li>
-  <li>💆‍♀️ Facial & Skincare</li>
-  <li>💇 Hair Styling</li>
-</ul>
+      <a
+        class="cta"
+        href="https://wa.me/91XXXXXXXXXX"
+        target="_blank"
+        rel="noopener"
+      >
+        📲 Book on WhatsApp
+      </a>
+    </section>
 
-<a href="https://wa.me/91XXXXXXXXXX">
-📲 Book on WhatsApp
-</a>
+    <!-- SERVICES -->
+    <section class="services">
+      <h2>Our Services</h2>
+
+      <ul>
+        <li>💄 Bridal Makeup</li>
+        <li>✨ Party & Occasion Makeup</li>
+        <li>💆‍♀️ Facial & Skincare Treatments</li>
+        <li>💇‍♀️ Hair Styling & Hair Spa</li>
+        <li>👰 Engagement & Reception Makeup</li>
+      </ul>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+      <h2>About Zuzu Beauty Studio</h2>
+
+      <p>
+        Zuzu Beauty Studio is run by a professional beautician offering
+        personalized makeup and beauty services. We focus on enhancing
+        your natural beauty with premium products and hygienic practices.
+      </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+      <h2>Contact</h2>
+
+      <p>
+        📍 Sivakasi<br />
+        📞 WhatsApp: <a href="https://wa.me/917598631207">917598631207</a>
+      </p>
+    </section>
+
+  </main>
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta {
+    display: inline-block;
+    background: #e91e63;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .cta:hover {
+    background: #d81b60;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  ul li {
+    padding: 0.5rem 0;
+    font-size: 1.05rem;
+  }
+
+  .contact a {
+    color: #e91e63;
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
